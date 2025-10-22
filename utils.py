@@ -28,7 +28,7 @@ def validate_age(age):
     """
     try:
         age = int(age)
-        return age > 0
+        return  0 < age <=120
     except ValueError:
         return False
 
@@ -44,3 +44,4 @@ def validate_time_slot(time):
     """
     pattern = r"^(?:[01]\d|2[0-3]):[0-5]\d$"
     return re.match(pattern, time) is not None
+
